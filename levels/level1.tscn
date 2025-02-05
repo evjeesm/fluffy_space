@@ -5,7 +5,7 @@
 [ext_resource type="PackedScene" uid="uid://daryh8kpuvun5" path="res://environment/asteroid/asteroid_base.tscn" id="1_omn1t"]
 [ext_resource type="PackedScene" uid="uid://c8ksm4l2p47gv" path="res://sphre_platform.tscn" id="2_ootpb"]
 [ext_resource type="PackedScene" uid="uid://c5xwr8fe5wrxn" path="res://win_area.tscn" id="3_ootpb"]
-[ext_resource type="AudioStream" uid="uid://1guo4qqmycc2" path="res://audio/8bit-video-game-music-289970.mp3" id="8_045es"]
+[ext_resource type="AudioStream" uid="uid://dml2ogbi0ryp" path="res://audio/8bit-video-game-music-289970.mp3" id="8_045es"]
 [ext_resource type="PackedScene" uid="uid://0bhi08ybaf74" path="res://environment/random_spheres.tscn" id="9_omn1t"]
 [ext_resource type="PackedScene" uid="uid://rt8sx63sbav7" path="res://sphre_platform_move.tscn" id="10_lf3p4"]
 
@@ -27,7 +27,7 @@ sky = SubResource("Sky_pdpul")
 transform = Transform3D(8.5502, 0, 0, 0, 8.5502, 0, 0, 0, 8.5502, 0, -7.4436, -3.63691)
 
 [node name="asteroid_base2" parent="environment" instance=ExtResource("1_omn1t")]
-transform = Transform3D(6.52444, 0, 0, 0, 10.7133, 0, 0, 0, 10.7133, 0, -8.10135, -65.1092)
+transform = Transform3D(8.5502, 0, 0, 0, 8.5502, 0, 0, 0, 8.5502, 0, -9.07426, -65.2851)
 
 [node name="asteroid_base3" parent="environment" instance=ExtResource("1_omn1t")]
 transform = Transform3D(6.52444, 0, 0, 0, 10.7133, 0, 0, 0, 10.7133, 0, -8.10135, -146.881)
@@ -47,7 +47,7 @@ shadow_enabled = true
 transform = Transform3D(0.579551, 0, 0, 0, 0.579551, 0, 0, 0, 0.579551, 1.65552, -5.35312, -16.6438)
 
 [node name="sphre_platform2" parent="." instance=ExtResource("2_ootpb")]
-transform = Transform3D(0.579551, 0, 0, 0, 0.579551, 0, 0, 0, 0.579551, 0.887317, -5.95585, -28.1333)
+transform = Transform3D(0.579551, 0, 0, 0, 0.579551, 0, 0, 0, 0.579551, 0.887317, -5.95585, -27.9932)
 
 [node name="sphre_platform3" parent="." instance=ExtResource("2_ootpb")]
 transform = Transform3D(0.579551, 0, 0, 0, 0.579551, 0, 0, 0, 0.579551, -0.55478, -5.35341, -38.6882)
@@ -59,7 +59,7 @@ transform = Transform3D(0.579551, 0, 0, 0, 0.579551, 0, 0, 0, 0.579551, -0.55478
 transform = Transform3D(0.579551, 0, 0, 0, 0.579551, 0, 0, 0, 0.579551, -0.55478, -5.35341, -124.58)
 
 [node name="sphre_platform4" parent="." instance=ExtResource("2_ootpb")]
-transform = Transform3D(0.579551, 0, 0, 0, 0.579551, 0, 0, 0, 0.579551, 1.25222, -5.35341, -49.2283)
+transform = Transform3D(0.579551, 0, 0, 0, 0.579551, 0, 0, 0, 0.579551, 1.25222, -5.35341, -48.2316)
 
 [node name="win_area" parent="." instance=ExtResource("3_ootpb")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.710413, 0.252629, -143.853)

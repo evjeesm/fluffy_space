@@ -1,22 +1,19 @@
-[gd_scene load_steps=4 format=3 uid="uid://c8ksm4l2p47gv"]
+[gd_scene load_steps=3 format=3 uid="uid://c8ksm4l2p47gv"]
 
-[ext_resource type="PackedScene" uid="uid://c8jr357s7o103" path="res://sphere.tscn" id="1_587bc"]
 [ext_resource type="PackedScene" uid="uid://cr6v23l3pd326" path="res://environment/asteroid/asteroid_2.tscn" id="2_rgtxb"]
 
-[sub_resource type="SphereShape3D" id="SphereShape3D_587bc"]
-radius = 4.63815
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_587bc"]
+radius = 3.63301
+height = 21.4507
 
 [node name="sphre_platform" type="Node3D"]
 
-[node name="sphere2" parent="." instance=ExtResource("1_587bc")]
-transform = Transform3D(1.5772, 0, 0, 0, 1.5772, 0, 0, 0, 1.5772, 0, 0, 0)
-visible = false
-
 [node name="StaticBody3D" type="StaticBody3D" parent="."]
+transform = Transform3D(0.85854, -0.512747, 0, 0.512747, 0.85854, 0, 0, 0, 1, 0, 0, 0)
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
-transform = Transform3D(1.53128, 0, 0, 0, 1.53128, 0, 0, 0, 1.53128, 0, 0, 0)
-shape = SubResource("SphereShape3D_587bc")
+transform = Transform3D(0.821245, -1.29243, 0, 1.29243, 0.821245, 0, 0, 0, 1.53128, 0, 0, 0)
+shape = SubResource("CapsuleShape3D_587bc")
 
 [node name="asteroid2" parent="." instance=ExtResource("2_rgtxb")]
-transform = Transform3D(2.74954, 0, 0, 0, 2.74954, 0, 0, 0, 2.74954, 0, 0, 0)
+transform = Transform3D(2.36059, -1.40982, 0, 1.40982, 2.36059, 0, 0, 0, 2.74954, 0, 0, 0)

@@ -3,8 +3,8 @@
 [ext_resource type="PackedScene" uid="uid://brpvlss2gl4py" path="res://environment/Asteroid_1b.blend" id="1_xls1u"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_xls1u"]
-radius = 1.48212
-height = 4.01448
+radius = 1.69229
+height = 5.45749
 
 [node name="asteroid_base" instance=ExtResource("1_xls1u")]
 
