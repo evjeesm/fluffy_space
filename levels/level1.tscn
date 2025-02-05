@@ -1,11 +1,10 @@
-[gd_scene load_steps=12 format=3 uid="uid://b5ty1v64bxqu2"]
+[gd_scene load_steps=11 format=3 uid="uid://b5ty1v64bxqu2"]
 
 [ext_resource type="Texture2D" uid="uid://bcraqgjf6nivf" path="res://character/space_man/nebula.exr" id="1_045es"]
 [ext_resource type="PackedScene" uid="uid://dpqlnqx4ygqm4" path="res://character/player.tscn" id="1_dopym"]
+[ext_resource type="PackedScene" uid="uid://daryh8kpuvun5" path="res://environment/asteroid/asteroid_base.tscn" id="1_omn1t"]
 [ext_resource type="PackedScene" uid="uid://c8ksm4l2p47gv" path="res://sphre_platform.tscn" id="2_ootpb"]
 [ext_resource type="PackedScene" uid="uid://c5xwr8fe5wrxn" path="res://win_area.tscn" id="3_ootpb"]
-[ext_resource type="PackedScene" uid="uid://di6dwlhmixhpr" path="res://environment/platform_2.tscn" id="3_yydhl"]
-[ext_resource type="PackedScene" uid="uid://c27j7e6v7aebf" path="res://levels/platform.tscn" id="5_61w3m"]
 [ext_resource type="PackedScene" uid="uid://0bhi08ybaf74" path="res://environment/random_spheres.tscn" id="9_omn1t"]
 [ext_resource type="PackedScene" uid="uid://rt8sx63sbav7" path="res://sphre_platform_move.tscn" id="10_lf3p4"]
 
@@ -23,6 +22,15 @@ sky = SubResource("Sky_pdpul")
 
 [node name="environment" type="Node3D" parent="."]
 
+[node name="asteroid_base" parent="environment" instance=ExtResource("1_omn1t")]
+transform = Transform3D(8.5502, 0, 0, 0, 8.5502, 0, 0, 0, 8.5502, 0, -7.4436, -3.63691)
+
+[node name="asteroid_base2" parent="environment" instance=ExtResource("1_omn1t")]
+transform = Transform3D(6.52444, 0, 0, 0, 10.7133, 0, 0, 0, 10.7133, 0, -8.10135, -65.1092)
+
+[node name="asteroid_base3" parent="environment" instance=ExtResource("1_omn1t")]
+transform = Transform3D(6.52444, 0, 0, 0, 10.7133, 0, 0, 0, 10.7133, 0, -8.10135, -146.881)
+
 [node name="WorldEnvironment" type="WorldEnvironment" parent="environment"]
 environment = SubResource("Environment_8hd6v")
 
@@ -31,17 +39,6 @@ transform = Transform3D(0.0498641, 0.578834, -0.813919, -0.185533, 0.806117, 0.5
 light_energy = 0.67
 light_specular = 0.505
 shadow_enabled = true
-
-[node name="platform" parent="environment" instance=ExtResource("5_61w3m")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00616074, 0.0929518, 0.0929146)
-
-[node name="platform_2" parent="environment" instance=ExtResource("3_yydhl")]
-
-[node name="platform_3" type="Node3D" parent="environment"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -72.9837)
-
-[node name="platform2" parent="environment/platform_3" instance=ExtResource("5_61w3m")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.535774, 0, -65.4852)
 
 [node name="first_platform" type="Node3D" parent="environment"]
 

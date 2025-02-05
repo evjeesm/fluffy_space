@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://daryh8kpuvun5"]
+
+[ext_resource type="PackedScene" uid="uid://brpvlss2gl4py" path="res://environment/Asteroid_1b.blend" id="1_xls1u"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_xls1u"]
+radius = 1.48212
+height = 4.01448
+
+[node name="asteroid_base" instance=ExtResource("1_xls1u")]
+
+[node name="StaticBody3D" type="StaticBody3D" parent="." index="1"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" index="0"]
+transform = Transform3D(-3.25935e-08, -0.745653, 0, 0.745653, -3.25935e-08, 0, 0, 0, 0.745653, 0, 0, 0)
+shape = SubResource("CapsuleShape3D_xls1u")
