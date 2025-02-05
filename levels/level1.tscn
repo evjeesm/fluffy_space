@@ -1,0 +1,88 @@
+[gd_scene load_steps=12 format=3 uid="uid://b5ty1v64bxqu2"]
+
+[ext_resource type="Texture2D" uid="uid://bcraqgjf6nivf" path="res://character/space_man/nebula.exr" id="1_045es"]
+[ext_resource type="PackedScene" uid="uid://dpqlnqx4ygqm4" path="res://character/player.tscn" id="1_dopym"]
+[ext_resource type="PackedScene" uid="uid://c8ksm4l2p47gv" path="res://sphre_platform.tscn" id="2_ootpb"]
+[ext_resource type="PackedScene" uid="uid://c5xwr8fe5wrxn" path="res://win_area.tscn" id="3_ootpb"]
+[ext_resource type="PackedScene" uid="uid://di6dwlhmixhpr" path="res://environment/platform_2.tscn" id="3_yydhl"]
+[ext_resource type="PackedScene" uid="uid://c27j7e6v7aebf" path="res://levels/platform.tscn" id="5_61w3m"]
+[ext_resource type="PackedScene" uid="uid://0bhi08ybaf74" path="res://environment/random_spheres.tscn" id="9_omn1t"]
+[ext_resource type="PackedScene" uid="uid://rt8sx63sbav7" path="res://sphre_platform_move.tscn" id="10_lf3p4"]
+
+[sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_61w3m"]
+panorama = ExtResource("1_045es")
+
+[sub_resource type="Sky" id="Sky_pdpul"]
+sky_material = SubResource("PanoramaSkyMaterial_61w3m")
+
+[sub_resource type="Environment" id="Environment_8hd6v"]
+background_mode = 2
+sky = SubResource("Sky_pdpul")
+
+[node name="level1" type="Node3D"]
+
+[node name="environment" type="Node3D" parent="."]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="environment"]
+environment = SubResource("Environment_8hd6v")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="environment/WorldEnvironment"]
+transform = Transform3D(0.0498641, 0.578834, -0.813919, -0.185533, 0.806117, 0.561919, 0.981372, 0.122989, 0.147589, -11.1548, 10.8676, 0)
+light_energy = 0.67
+light_specular = 0.505
+shadow_enabled = true
+
+[node name="platform" parent="environment" instance=ExtResource("5_61w3m")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00616074, 0.0929518, 0.0929146)
+
+[node name="platform_2" parent="environment" instance=ExtResource("3_yydhl")]
+
+[node name="platform_3" type="Node3D" parent="environment"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -72.9837)
+
+[node name="platform2" parent="environment/platform_3" instance=ExtResource("5_61w3m")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.535774, 0, -65.4852)
+
+[node name="first_platform" type="Node3D" parent="environment"]
+
+[node name="sphre_platform" parent="." instance=ExtResource("2_ootpb")]
+transform = Transform3D(0.579551, 0, 0, 0, 0.579551, 0, 0, 0, 0.579551, 1.65552, -5.35312, -16.6438)
+
+[node name="sphre_platform2" parent="." instance=ExtResource("2_ootpb")]
+transform = Transform3D(0.579551, 0, 0, 0, 0.579551, 0, 0, 0, 0.579551, 0.887317, -5.95585, -28.1333)
+
+[node name="sphre_platform3" parent="." instance=ExtResource("2_ootpb")]
+transform = Transform3D(0.579551, 0, 0, 0, 0.579551, 0, 0, 0, 0.579551, -0.55478, -5.35341, -38.6882)
+
+[node name="sphre_platform5" parent="." instance=ExtResource("2_ootpb")]
+transform = Transform3D(0.579551, 0, 0, 0, 0.579551, 0, 0, 0, 0.579551, -0.55478, -5.35341, -98.6135)
+
+[node name="sphre_platform6" parent="." instance=ExtResource("2_ootpb")]
+transform = Transform3D(0.579551, 0, 0, 0, 0.579551, 0, 0, 0, 0.579551, -0.55478, -5.35341, -124.58)
+
+[node name="sphre_platform4" parent="." instance=ExtResource("2_ootpb")]
+transform = Transform3D(0.579551, 0, 0, 0, 0.579551, 0, 0, 0, 0.579551, 1.25222, -5.35341, -49.2283)
+
+[node name="win_area" parent="." instance=ExtResource("3_ootpb")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.710413, 0.252629, -143.853)
+
+[node name="Player" parent="." instance=ExtResource("1_dopym")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -1.35313)
+
+[node name="random_spheres" parent="." instance=ExtResource("9_omn1t")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 49.0936, 12.3656, -36.84)
+
+[node name="random_spheres2" parent="." instance=ExtResource("9_omn1t")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -50.2509, 9.2035, -36.84)
+
+[node name="random_spheres3" parent="." instance=ExtResource("9_omn1t")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -15.6239, 9.2035, -142.763)
+
+[node name="random_spheres4" parent="." instance=ExtResource("9_omn1t")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 48.6606, 9.2035, -141.038)
+
+[node name="sphere_move" parent="." instance=ExtResource("10_lf3p4")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.05454, -8.11457, -85.4456)
+
+[node name="sphere_move2" parent="." instance=ExtResource("10_lf3p4")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.05454, -8.03232, -111.331)

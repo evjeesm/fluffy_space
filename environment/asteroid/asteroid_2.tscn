@@ -1,0 +1,5 @@
+[gd_scene load_steps=2 format=3 uid="uid://cr6v23l3pd326"]
+
+[ext_resource type="PackedScene" uid="uid://bcj2s2qxie3h0" path="res://character/asteroid.glb" id="1_c5c6n"]
+
+[node name="asteroid2" instance=ExtResource("1_c5c6n")]
