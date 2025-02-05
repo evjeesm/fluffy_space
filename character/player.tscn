@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://dpqlnqx4ygqm4"]
 
 [ext_resource type="Script" uid="uid://c0sydnad0ul5b" path="res://character.gd" id="1_pjt0s"]
-[ext_resource type="PackedScene" uid="uid://krxc45m5gjvd" path="res://character/space_man/space_man.glb" id="2_monf5"]
+[ext_resource type="PackedScene" uid="uid://cqpda6p0dlmxj" path="res://character/space_man/space.fbx" id="2_monf5"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_glpr6"]
 radius = 2.15314
@@ -12,8 +12,8 @@ script = ExtResource("1_pjt0s")
 
 [node name="Pivot" type="Node3D" parent="."]
 
-[node name="space_man" parent="Pivot" instance=ExtResource("2_monf5")]
-transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0, 0)
+[node name="space" parent="Pivot" instance=ExtResource("2_monf5")]
+transform = Transform3D(-3.21802, 0, -2.81328e-07, 0, 3.21802, 0, 2.81328e-07, 0, -3.21802, 0, 0, 0)
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 7.16602, 0)
